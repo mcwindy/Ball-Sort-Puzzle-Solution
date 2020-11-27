@@ -3,7 +3,8 @@
 # 1 2 1 2
 # 3 1 2 3
 
-# The former number indicates the number of states when getting the answer. The latter number indicates the total states recorded.
+# 前面的数字代表结果的状态数，后面的数字代表获得结果时总存储状态数
+# 虽然tmp1==tmp2时状态数较少，但是会打乱tube顺序，不利于阅读，因此保留顺序
 # level 23
 # normal sort     746294 1015540
 # +len sort       909408 960816
