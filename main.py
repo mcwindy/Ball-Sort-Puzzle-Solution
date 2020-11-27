@@ -16,7 +16,7 @@ def forward(s):
                     tmp1.sort(key=lambda x: tubeNum if len(x) == 0 else x[0])
                     if str(tmp1) not in sett:
                         future.append(tmp2)  # tmp1
-                        statements.append('move ' + str(i) + ' to ' + str(j))
+                        statements.append('move ' + str(i + 1) + ' to ' + str(j + 1))
                         sett.add(str(tmp1))
     # for i in future:
     #     for j in i:
@@ -80,3 +80,53 @@ for i, k in enumerate(tmp):
     for j in k:
         print(j)
     print()
+
+
+# 5
+# 1 2 3 3
+# 1 2 1 2
+# 3 1 2 3
+
+# level 23
+# normal sort     746294 1015540
+# +len sort       909408 960816
+# -len sort       904565 957039
+# tmp2=tmp1 sort  21286 21552
+# current sort    28609 29223
+# 9
+# 1 2 3 4
+# 3 2 5 6
+# 4 7 4 6
+# 3 1 5 6
+# 3 7 2 6
+# 7 1 1 2
+# 5 5 4 7
+
+# level 58
+# 11
+# 1 2 2 3
+# 4 5 3 6
+# 7 8 4 6
+# 8 5 4 5
+# 7 2 9 1
+# 7 9 1 3
+# 9 2 6 6
+# 3 4 5 9
+# 7 1 8 8
+
+# level 107
+# tmp2=tmp1 sort  58422 60882
+# current sort    91585 98176
+# 14
+# 1 2 3 4
+# 5 6 7 8
+# 7 4 9 6
+# 10 8 9 1
+# 7 10 11 6
+# 1 7 3 6
+# 12 5 3 2
+# 9 5 12 8
+# 4 5 11 11
+# 2 9 10 12
+# 2 1 4 3
+# 11 12 10 8
